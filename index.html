@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT Student Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --chip: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+      background: radial-gradient(1000px 600px at 80% -10%, #1e293b, transparent), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+    header {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: clamp(16px, 2.2vw, 18px);
+      margin-top: 6px;
+    }
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .btn {
+      background: var(--accent);
+      color: #0b1220;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid #334155;
+      color: var(--text);
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(56,189,248,0.2); }
+
+    section {
+      margin-top: 36px;
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+      .grid.three { grid-template-columns: repeat(3, 1fr); }
+    }
+    .card {
+      background: rgba(17, 24, 39, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(6px);
+    }
+    .card h3 { margin: 0 0 8px; }
+    .card p { margin: 0; color: var(--muted); }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .chip {
+      background: var(--chip);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--text);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    footer {
+      margin-top: 48px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    .muted { color: var(--muted); }
+    .list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .list li {
+      padding-left: 18px;
+      position: relative;
+    }
+    .list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .inline-links a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(148,163,184,0.4);
+    }
+    .inline-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="card">
+      <div class="tag">IT Student • Portfolio</div>
+      <h1>Hi, I’m <span style="color: var(--accent);">Your Name</span></h1>
+      <p class="subtitle">Aspiring IT professional focused on systems, networking, and practical problem‑solving. I build reliable, user‑friendly solutions and love learning new technologies.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:youremail@example.com">Contact Me</a>
+        <a class="btn secondary" href="https://github.com/Grizzly-0213" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn secondary" href="#projects">View Projects</a>
+      </div>
+    </header>
+
+    <section class="grid two">
+      <div class="card">
+        <h3>About Me</h3>
+        <p>
+          I’m an IT student with interests in networking, cybersecurity fundamentals, and full‑stack basics.
+          I enjoy turning ideas into working systems and continuously improving my skills through hands‑on projects.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Core Strengths</h3>
+        <ul class="list">
+          <li>Strong troubleshooting and analytical thinking</li>
+          <li>Clear communication and teamwork</li>
+          <li>Organized, detail‑oriented, and dependable</li>
+          <li>Always learning and adapting to new tools</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h3>Skills</h3>
+        <div class="chips">
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Networking Basics</span>
+          <span class="chip">Git & GitHub</span>
+          <span class="chip">Troubleshooting</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="grid two">
+      <div class="card">
+        <h3>Project 1 — Network Monitoring Dashboard</h3>
+        <p>Built a simple dashboard that tracks device uptime and alerts on thresholds using Python scripts and a web UI.</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Flask</span>
+          <span class="chip">SQLite</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Project 2 — Student Helpdesk Tracker</h3>
+        <p>Designed a ticketing prototype to log issues, assign tasks, and export reports for a small campus IT lab.</p>
+        <div class="chips">
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">LocalStorage</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Project 3 — Secure Password Vault</h3>
+        <p>Created a lightweight CLI password manager with encryption and search functionality.</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Cryptography</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Project 4 — System Health Report</h3>
+        <p>Automated system health checks and generated a weekly report using shell scripts.</p>
+        <div class="chips">
+          <span class="chip">Bash</span>
+          <span class="chip">Linux</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid two">
+      <div class="card">
+        <h3>Education</h3>
+        <p><strong>Diploma / BSc in Information Technology</strong><br />Your University • 2024 – Present</p>
+        <p class="muted">Relevant coursework: Networking, Operating Systems, Databases, Cybersecurity Fundamentals.</p>
+      </div>
+      <div class="card">
+        <h3>Certifications (Planned/Working On)</h3>
+        <ul class="list">
+          <li>CompTIA A+</li>
+          <li>CompTIA Network+</li>
+          <li>Google IT Support Certificate</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h3>Contact</h3>
+        <p class="inline-links">
+          Email: <a href="mailto:youremail@example.com">youremail@example.com</a><br />
+          LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin.com/in/yourname</a><br />
+          GitHub: <a href="https://github.com/Grizzly-0213" target="_blank" rel="noreferrer">github.com/Grizzly-0213</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Your Name • Built with HTML & CSS
+    </footer>
+  </div>
+</body>
+</html>
